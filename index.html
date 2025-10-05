@@ -3,187 +3,516 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Renato Stofel Cavalcanti</title>
-  <meta name="description" content="Renato Stofel Cavalcanti — Engenheiro Civil (CREA‑RJ). Planejamento, orçamento, reengenharia e gestão de obras residenciais de grande porte no RJ." />
+  <title>Renato Stofel Cavalcanti - Engenheiro Civil</title>
+  <meta name="description" content="Renato Stofel Cavalcanti — Engenheiro Civil (CREA‑RJ). Planejamento, orçamento e liderança de instalações em obras residenciais de grande porte. Contato por e‑mail e WhatsApp e verificação oficial do CREA-RJ." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    :root{
-      --ink:#0a0a0a;     /* preto elegante */
-      --muted:#5a5a5a;   /* cinza executivo */
-      --paper:#ffffff;   /* fundo branco */
-      --smoke:#f6f6f6;   /* painéis leves */
-      --line:#eaeaea;    /* divisórias */
+    :root{ 
+      --ink:#0b0b0b; 
+      --muted:#585858; 
+      --line:#e9e9e9; 
+      --paper:#ffffff; 
+      --accent:#1a5276;
+      --light-bg:#f9f9f9;
+      --accent-light:#2c7fb8;
     }
-    html{scroll-behavior:smooth}
-    body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
-    .container{max-width:1180px;margin:0 auto;padding:0 28px}
-
-    /* Tipografia diretoria */
-    h1,h2,h3{font-family:"Playfair Display",serif;color:var(--ink);letter-spacing:.2px}
-    h1{font-size:clamp(42px,6.6vw,78px);font-weight:800;margin:0}
-    h2{font-size:clamp(26px,3vw,40px);font-weight:800;margin:0}
-    h3{font-size:clamp(18px,2vw,22px);font-weight:700;margin:0}
-    .lede{font-size:18px;color:var(--muted)}
-
-    /* Navegação minimalista */
-    header{position:relative}
-    .nav{border-bottom:1px solid var(--line)}
-    .brand{display:flex;align-items:center;gap:14px}
-    .monogram{height:52px;width:52px;border-radius:16px;background:#111;color:#fff;display:grid;place-items:center;font-weight:900;letter-spacing:.5px}
-    .nav a{color:var(--ink);text-decoration:none;opacity:.88}
-    .nav a:hover{opacity:1}
-
-    /* Hero executivo */
-    .ribbon{position:absolute;inset:auto 0 0 0;height:180px;background:linear-gradient(180deg,rgba(0,0,0,.06),transparent)}
-    .grid-bg{position:absolute;inset:0;background-image:linear-gradient(transparent 31px,var(--line) 32px),linear-gradient(90deg,transparent 31px,var(--line) 32px);background-size:32px 32px;opacity:.35}
-    .pill{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);padding:.45rem .85rem;border-radius:999px;background:#fff;font-weight:800;color:var(--ink)}
-
-    /* Blocos */
-    .panel{background:var(--smoke);border:1px solid var(--line);border-radius:18px;padding:24px}
-    .panel.white{background:#fff}
-    .divider{height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent)}
-
-    /* Grid responsiva */
-    .grid{display:grid;gap:22px}
-    @media(min-width:960px){
-      .cols-12{grid-template-columns:repeat(12,1fr)}
-      .span-7{grid-column:span 7}
-      .span-5{grid-column:span 5}
-      .cols-2{grid-template-columns:1.2fr .8fr}
-      .cols-3{grid-template-columns:repeat(3,1fr)}
+    html{ scroll-behavior:smooth }
+    body{ 
+      margin:0; 
+      background:var(--paper); 
+      color:var(--ink); 
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; 
+      line-height:1.65 
+    }
+    .container{ 
+      max-width:1160px; 
+      margin:0 auto; 
+      padding:0 24px 
     }
 
-    .btn{display:inline-flex;align-items:center;gap:10px;border-radius:12px;padding:.78rem 1.15rem;font-weight:800;border:1px solid var(--line);background:#fff;color:var(--ink)}
-    .btn.primary{background:var(--ink);color:#fff;border-color:#000}
+    /* Tipografia */
+    h1,h2,h3{ 
+      font-family:"Playfair Display",serif; 
+      color:var(--ink); 
+      letter-spacing:.2px; 
+      margin:0 
+    }
+    h1{ 
+      font-size:clamp(42px,7vw,84px); 
+      font-weight:800;
+      margin-bottom: 12px;
+      line-height: 1.1;
+    }
+    h2{ 
+      font-size:clamp(26px,3.2vw,40px); 
+      font-weight:800;
+      margin-bottom: 16px;
+    }
+    h3{ 
+      font-size:clamp(18px,2vw,22px); 
+      font-weight:700;
+      margin-bottom: 8px;
+    }
+    .lede{ 
+      font-size:18px; 
+      color:var(--muted);
+      margin-bottom: 20px;
+      max-width: 800px;
+    }
 
-    footer{padding:44px 0;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+    /* Cabeçalho fixo */
+    header{ 
+      position:sticky; 
+      top:0; 
+      z-index:50; 
+      background:rgba(255, 255, 255, 0.95); 
+      border-bottom:1px solid var(--line);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      backdrop-filter: blur(10px);
+    }
+    .topbar{ 
+      display:flex; 
+      align-items:center; 
+      justify-content:space-between; 
+      gap:16px; 
+      padding:14px 0 
+    }
+    .brand{ 
+      display:flex; 
+      align-items:center; 
+      gap:12px 
+    }
+    .mono{ 
+      height:44px; 
+      width:44px; 
+      border-radius:12px; 
+      background:var(--accent); 
+      color:#fff; 
+      display:grid; 
+      place-items:center; 
+      font-weight:900;
+      font-size: 18px;
+      transition: all 0.3s ease;
+    }
+    .brand:hover .mono {
+      transform: rotate(10deg);
+      background: var(--accent-light);
+    }
+    nav a{ 
+      text-decoration:none; 
+      color:var(--ink); 
+      opacity:.9; 
+      margin-left:18px;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+    nav a:hover{ 
+      opacity:1;
+      color: var(--accent);
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: var(--accent);
+      transition: width 0.3s ease;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* Hero */
+    .hero{ 
+      padding:100px 0 80px 0;
+      background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(26, 82, 118, 0.05) 0%, rgba(255,255,255,0) 70%);
+      z-index: 0;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .chips{ 
+      display:flex; 
+      gap:10px; 
+      flex-wrap:wrap; 
+      margin:20px 0 24px 0 
+    }
+    .chip{ 
+      display:inline-flex; 
+      align-items:center; 
+      gap:8px; 
+      border:1px solid var(--line); 
+      padding:.45rem .8rem; 
+      border-radius:999px; 
+      background:#fff; 
+      font-weight:800;
+      font-size: 14px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+      transition: all 0.3s ease;
+    }
+    .chip:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    }
+
+    /* Seções */
+    section{ 
+      padding:80px 0;
+      position: relative;
+    }
+    .panel{ 
+      background:#fff; 
+      border:1px solid var(--line); 
+      border-radius:18px; 
+      padding:32px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+      transition: all 0.3s ease;
+    }
+    .panel:hover {
+      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+      transform: translateY(-2px);
+    }
+    .cols{ 
+      display:grid; 
+      gap:24px 
+    }
+    @media(min-width:940px){ 
+      .cols-2{ grid-template-columns:1.1fr .9fr } 
+      .cols-3{ grid-template-columns:repeat(3,1fr) } 
+    }
+
+    /* Botões (âmbitos de clique plenos) */
+    .actions{ 
+      display:flex; 
+      gap:12px; 
+      flex-wrap:wrap; 
+      margin-top:20px 
+    }
+    .btn{ 
+      display:inline-flex; 
+      align-items:center; 
+      justify-content:center; 
+      gap:10px; 
+      padding:.85rem 1.5rem; 
+      border-radius:12px; 
+      border:1px solid var(--line); 
+      background:#fff; 
+      color:var(--ink); 
+      font-weight:800; 
+      text-decoration:none;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      min-height: 48px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      position: relative;
+      overflow: hidden;
+    }
+    .btn::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: -100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+      transition: left 0.7s ease;
+    }
+    .btn:hover::after {
+      left: 100%;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .btn.primary{ 
+      background:var(--accent); 
+      color:#fff; 
+      border-color:var(--accent);
+    }
+    .btn.primary:hover {
+      background:var(--accent-light);
+      border-color: var(--accent-light);
+    }
+    .btn i {
+      font-size: 1.1em;
+    }
+
+    /* Listas e metadados */
+    .meta{ 
+      color:#6a6a6a; 
+      font-size:14px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .meta i {
+      color: var(--accent);
+    }
+    ul.tight>li{ 
+      margin:.5rem 0;
+      line-height: 1.6;
+      position: relative;
+      padding-left: 16px;
+    }
+    ul.tight>li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    /* Seções com fundo alternado */
+    .bg-light {
+      background-color: var(--light-bg);
+    }
+
+    /* Artigos de experiência */
+    .exp-article {
+      margin-top: 24px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--line);
+    }
+    .exp-article:last-child {
+      border-bottom: none;
+    }
+
+    footer{ 
+      padding:48px 0; 
+      border-top:1px solid var(--line); 
+      color:#6a6a6a; 
+      font-size:14px;
+      background-color: var(--light-bg);
+    }
+
+    /* Responsividade melhorada */
+    @media (max-width: 768px) {
+      .topbar {
+        flex-direction: column;
+        padding: 16px 0;
+      }
+      nav {
+        margin-top: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      nav a {
+        margin: 0 8px;
+      }
+      .hero {
+        padding: 80px 0 50px 0;
+      }
+      .actions {
+        flex-direction: column;
+      }
+      .btn {
+        justify-content: center;
+        width: 100%;
+      }
+      section {
+        padding: 50px 0;
+      }
+      .panel {
+        padding: 24px;
+      }
+    }
   </style>
 </head>
-<body class="antialiased">
-  <!-- HERO executivo, sem indicadores -->
-  <header>
-    <div class="grid-bg" aria-hidden></div>
-    <div class="ribbon" aria-hidden></div>
-
-    <div class="nav container" style="padding:22px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px">
+<body>
+  <!-- Cabeçalho -->
+  <header role="banner">
+    <div class="container topbar">
       <div class="brand">
-        <div class="monogram">RS</div>
-        <div class="font-semibold" style="font-variant-caps:small-caps">Renato Stofel Cavalcanti</div>
+        <div class="mono" aria-hidden>RS</div>
+        <strong>Renato Stofel Cavalcanti</strong>
       </div>
-      <nav style="display:flex;gap:26px;flex-wrap:wrap">
+      <nav aria-label="Navegação da página">
         <a href="#sobre">Sobre</a>
-        <a href="#atuacao">Atuação</a>
         <a href="#experiencia">Experiência</a>
+        <a href="#formacao">Formação</a>
         <a href="#contato">Contato</a>
       </nav>
     </div>
-
-    <div class="container" style="padding:58px 28px 72px 28px">
-      <div class="grid cols-12">
-        <div class="span-7">
-          <!-- TÍTULO = NOME -->
-          <h1>Renato Stofel Cavalcanti</h1>
-          <!-- Subtítulo com enfoque na credencial -->
-          <p class="lede" style="margin-top:10px"><strong>Engenheiro Civil — CREA‑RJ</strong>. Planejamento, orçamento e liderança de instalações em empreendimentos residenciais de grande porte. Visão de custo, prazo e qualidade traduzida em rotinas objetivas.</p>
-          <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
-            <a class="btn" href="#experiencia">Trajetória</a>
-            <a class="btn" href="#atuacao">Onde atuo</a>
-          </div>
-        </div>
-        <aside class="span-5 panel white">
-          <p style="letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px 0;font-size:12px">Credencial CREA‑RJ</p>
-          <p style="margin:0">Verificação oficial da carteira digital:</p>
-          <p style="margin:8px 0 0 0"><a class="btn" style="padding:.6rem .9rem" target="_blank" rel="noopener" href="https://sci.confea.org.br/carteiradigital/?q=3188062&AspxAutoDetectCookieSupport=1">Abrir carteira digital</a></p>
-        </aside>
-      </div>
-    </div>
   </header>
 
-  <!-- SOBRE + ATUAÇÃO (sem indicadores) -->
-  <section id="sobre" class="container" style="padding:0 28px 0 28px">
-    <div class="panel white">
-      <div class="grid cols-2">
-        <div>
-          <h2>Apresentação</h2>
-          <p class="lede" style="margin-top:10px">Atuação prática em instalações (AF/AQ, esgoto, pluvial, incêndio, gás, elétrica — NBR 5410/NR10), com planejamento semanal e <em>lookahead</em>, reengenharia e gestão de custos e riscos. Rotina com kanban por frente e documentação objetiva.</p>
-        </div>
-        <aside>
-          <h3>Onde posso atuar</h3>
-          <ul style="margin:10px 0 0 18px">
-            <li>Coordenação de obras e equipes</li>
-            <li>Planejamento semanal e por pavimento</li>
-            <li>Orçamentos e revisão de custos</li>
-            <li>Reengenharia de soluções</li>
-            <li>Gestão de riscos e qualidade</li>
-            <li>Relatórios executivos e padrões</li>
-            <li>Treinamentos rápidos em obra</li>
-          </ul>
-        </aside>
+  <!-- HERO → título = nome; subtítulo = Eng. Civil -->
+  <section class="hero" id="inicio">
+    <div class="container hero-content">
+      <h1>Renato Stofel Cavalcanti</h1>
+      <p class="lede"><strong>Engenheiro Civil</strong> — planejamento, orçamento e liderança de instalações em obras residenciais de grande porte. Entregas com previsibilidade de custo, prazo e qualidade.</p>
+      <div class="chips" aria-label="destaques">
+        <span class="chip">CREA‑RJ</span>
+        <span class="chip">Orçamento & Reengenharia</span>
+        <span class="chip">Custos & Riscos</span>
+      </div>
+      <div class="actions" aria-label="ações principais">
+        <a class="btn primary" href="mailto:rsscavalcanti@gmail.com" title="Enviar e‑mail">
+          <i class="fas fa-envelope"></i> Enviar e‑mail
+        </a>
+        <a class="btn" href="https://wa.me/5521969814820" target="_blank" rel="noopener" title="Abrir WhatsApp">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <a class="btn" href="https://sci.confea.org.br/carteiradigital/?q=3188062&AspxAutoDetectCookieSupport=1" target="_blank" rel="noopener" title="Verificar CREA‑RJ">
+          <i class="fas fa-id-card"></i> Verificação CREA‑RJ
+        </a>
+        <a class="btn" href="https://br.linkedin.com/in/renato-stofel-49574a92" target="_blank" rel="noopener" title="Ver perfil no LinkedIn">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- EXPERIÊNCIA (sem indicadores) -->
-  <section id="experiencia" class="container" style="padding:22px 28px 64px 28px">
-    <div class="grid cols-2">
-      <div class="panel">
+  <!-- SOBRE -->
+  <section id="sobre" class="bg-light">
+    <div class="container panel cols cols-2">
+      <div>
+        <h2>Sobre</h2>
+        <p class="lede">Mais de 10 anos entre campo e gestão. Atuação em instalações prediais (AF/AQ, esgoto, pluvial, incêndio, gás e elétrica — NBR 5410/NR10), planejamento semanal e <em>lookahead</em>, reengenharia e controle de custos e riscos.</p>
+        <p>Rotinas objetivas, comunicação direta e documentação clara: kanban por frente, checklists enxutos, relatórios consistentes e acompanhamento por pavimento. Objetivo: reduzir retrabalho e garantir previsibilidade.</p>
+      </div>
+      <aside>
+        <h2>Onde atuo</h2>
+        <ul class="tight">
+          <li>Coordenação de obras e equipes</li>
+          <li>Planejamento semanal e por pavimento</li>
+          <li>Orçamentos e revisão de custos</li>
+          <li>Reengenharia e compatibilização</li>
+          <li>Gestão de riscos e qualidade</li>
+          <li>Relatórios executivos e padrões</li>
+          <li>Treinamentos rápidos em obra</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- EXPERIÊNCIA (resumida e com datas) -->
+  <section id="experiencia">
+    <div class="container panel">
+      <h2>Experiência</h2>
+
+      <article class="exp-article">
         <h3>System Engenharia — Engenheiro de Instalações</h3>
-        <p style="color:var(--muted);margin:.2rem 0 .8rem 0">Planejamento e Gestão de Contratos • RJ</p>
-        <ul style="margin:0 0 0 18px">
-          <li>Coordenação de instalações (AF/AQ, esgoto, pluvial, incêndio, gás e elétrica).</li>
-          <li>Orçamento, reengenharia e riscos alinhados ao físico‑financeiro.</li>
-          <li>Padronização de qualidade e documentação.</li>
+        <div class="meta"><i class="fas fa-map-marker-alt"></i> Rio de Janeiro • <strong>2023 — atual</strong></div>
+        <ul class="tight">
+          <li>Coordenação de AF/AQ, esgoto, pluvial, incêndio, gás e elétrica com foco em conformidade (ABNT, NBR 5410/NR10, CBMERJ, Naturgy, Light RJ).</li>
+          <li>Planejamento semanal e <em>lookahead</em>, padronização por pavimento e gestão de fornecedores.</li>
+          <li>Orçamento, reengenharia e riscos integrados ao físico‑financeiro.</li>
         </ul>
-      </div>
-      <div class="panel">
+      </article>
+
+      <article class="exp-article">
         <h3>System Rio — Orçamentista</h3>
-        <p style="color:var(--muted);margin:.2rem 0 .8rem 0">Análise de custos, composições e curva ABC • RJ</p>
-        <ul style="margin:0 0 0 18px">
-          <li>Estimativas por pacote/fornecedor e comparativos.</li>
-          <li>Integração com cronograma e fluxo de caixa.</li>
-          <li>Alternativas técnicas com melhor custo‑benefício.</li>
+        <div class="meta"><i class="fas fa-map-marker-alt"></i> Rio de Janeiro • <strong>2019 — 2023</strong></div>
+        <ul class="tight">
+          <li>Estimativas e composições por pacote/fornecedor, comparativos e curva ABC.</li>
+          <li>Integração com cronograma e fluxo de caixa; estudos de alternativas com melhor custo‑benefício.</li>
+        </ul>
+      </article>
+
+      <article class="exp-article">
+        <h3>Projetos residenciais — Patrimar, Cyrela e outros</h3>
+        <div class="meta"><i class="fas fa-map-marker-alt"></i> Rio de Janeiro • <strong>diversos períodos</strong></div>
+        <ul class="tight">
+          <li>Gestão de instalações por pavimento e comissionamento (Atlântico Golf, Riserva Golf, Orygem, Iconyc).</li>
+          <li>Padronização de qualidade, testes e entregas faseadas.</li>
+        </ul>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- FORMAÇÃO -->
+  <section id="formacao" class="bg-light">
+    <div class="container panel cols cols-2">
+      <div>
+        <h2>Formação</h2>
+        <ul class="tight">
+          <li><strong>Engenharia Civil</strong> — UNISUAM</li>
+          <li><strong>Pós‑graduação em Gestão com IA</strong> — cursando</li>
         </ul>
       </div>
+      <aside>
+        <h2>Perfil</h2>
+        <ul class="tight">
+          <li>Normas: ABNT, CBMERJ, Naturgy, Light RJ</li>
+          <li>Interesse em liderança de equipes e padronização</li>
+          <li>Histórico profissional completo no LinkedIn</li>
+        </ul>
+        <div class="actions" style="margin-top:16px">
+          <a class="btn primary" href="https://br.linkedin.com/in/renato-stofel-49574a92" target="_blank" rel="noopener" title="Ver LinkedIn">
+            <i class="fab fa-linkedin"></i> Ver LinkedIn
+          </a>
+        </div>
+      </aside>
     </div>
   </section>
 
-  <!-- CONTATO (enfoque credencial + dados) -->
-  <section id="contato" class="container" style="padding:0 28px 64px 28px">
-    <div class="panel white">
-      <div class="grid" style="grid-template-columns:1fr 1fr;gap:18px;align-items:center">
-        <div>
-          <h2>Contato</h2>
-          <p class="lede" style="margin-top:8px">Conversa objetiva para alinhar escopo e próximos passos.</p>
-          <div style="margin-top:14px;display:flex;gap:12px;flex-wrap:wrap">
-            <a class="btn primary" href="mailto:rsscavalcanti@gmail.com">Enviar e‑mail</a>
-            <a class="btn" href="https://wa.me/5521969814820" target="_blank">WhatsApp</a>
-          </div>
-        </div>
-        <div class="panel" style="background:#fff">
-          <p style="letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-size:12px;margin:0 0 6px 0">Dados</p>
-          <ul style="margin:0;padding-left:0;list-style:none;color:var(--ink)">
-            <li>📍 Rio de Janeiro — RJ</li>
-            <li>📧 rsscavalcanti@gmail.com</li>
-            <li>📱 +55 (21) 96981‑4820</li>
-          </ul>
-          <div class="divider" style="margin:14px 0"></div>
-          <a class="btn" style="padding:.6rem .9rem" target="_blank" rel="noopener" href="https://sci.confea.org.br/carteiradigital/?q=3188062&AspxAutoDetectCookieSupport=1">Verificação CREA‑RJ</a>
-        </div>
+  <!-- CONTATO -->
+  <section id="contato">
+    <div class="container panel">
+      <h2>Contato</h2>
+      <p class="lede">Vamos falar sobre escopo e próximos passos.</p>
+      <div class="actions">
+        <a class="btn primary" href="mailto:rsscavalcanti@gmail.com" title="Enviar e‑mail">
+          <i class="fas fa-envelope"></i> Enviar e‑mail
+        </a>
+        <a class="btn" href="https://wa.me/5521969814820" target="_blank" rel="noopener" title="Abrir WhatsApp">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <a class="btn" href="https://sci.confea.org.br/carteiradigital/?q=3188062&AspxAutoDetectCookieSupport=1" target="_blank" rel="noopener" title="Verificar CREA‑RJ">
+          <i class="fas fa-id-card"></i> Verificação CREA‑RJ
+        </a>
+        <a class="btn" href="https://br.linkedin.com/in/renato-stofel-49574a92" target="_blank" rel="noopener" title="Ver perfil no LinkedIn">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
       </div>
     </div>
   </section>
 
-  <footer>
-    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:16px">
-      <p>© <span id="y"></span> Renato Stofel Cavalcanti. Todos os direitos reservados.</p>
-      <p style="opacity:.88">Site estático</p>
+  <footer role="contentinfo">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+      <p>© <span id="y"></span> Renato Stofel Cavalcanti</p>
+      <p style="opacity:.9">Engenheiro Civil - CREA-RJ</p>
     </div>
   </footer>
 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
+    
+    // Adiciona efeito suave de rolagem para os links de navegação
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
   </script>
 </body>
 </html>
