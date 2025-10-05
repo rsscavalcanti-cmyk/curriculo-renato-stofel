@@ -2,165 +2,189 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Renato Stofel — Engenheiro Civil</title>
-  <meta name="description" content="Currículo clássico e elegante de Renato Stofel: gestão de obras, liderança e instalações prediais de grande porte." />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Renato Stofel Cavalcanti</title>
+  <meta name="description" content="Renato Stofel Cavalcanti — Engenheiro Civil (CREA‑RJ). Planejamento, orçamento, reengenharia e gestão de obras residenciais de grande porte no RJ." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Tipos clássicos, com reforço no nome -->
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=IM+Fell+English:ital@0;1&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      --paper:#f7f3ee; --ink:#2b2a27; --muted:#5a5854; --border:#d5cec3; --accent:#7a5c2f; --accent-soft:#b79b6b; --link:#644a1f;
+      --ink:#0a0a0a;     /* preto elegante */
+      --muted:#5a5a5a;   /* cinza executivo */
+      --paper:#ffffff;   /* fundo branco */
+      --smoke:#f6f6f6;   /* painéis leves */
+      --line:#eaeaea;    /* divisórias */
     }
-    body{margin:0;background:radial-gradient(1200px 600px at 50% -10%, #ffffff 0%, var(--paper) 60%, #efe7db 100%);color:var(--ink);font-family:"Libre Baskerville", Georgia, serif;line-height:1.55}
-    .container{max-width:1024px;margin:0 auto;padding:0 24px}
-    header{position:sticky;top:0;z-index:20;background:linear-gradient(#faf6efee,#faf6efcc);border-bottom:1px solid var(--border)}
-    nav a{color:var(--ink);text-decoration:none;margin-right:18px;font-variant-caps:small-caps;letter-spacing:.06em;opacity:.85}
-    nav a:hover{opacity:1;color:var(--link)}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
+    .container{max-width:1180px;margin:0 auto;padding:0 28px}
 
-    /* BLOCO ESPECIAL DO NOME */
-    .namebar{display:flex;align-items:center;gap:18px;padding:14px 0}
-    .medallion{width:52px;height:52px;border:1px solid var(--border);border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#8b6b2f,#5c4522);color:#fff;text-shadow:0 1px 0 rgba(0,0,0,.25)}
-    .medallion span{font-family:"IM Fell English",serif;font-size:22px;letter-spacing:.5px}
+    /* Tipografia diretoria */
+    h1,h2,h3{font-family:"Playfair Display",serif;color:var(--ink);letter-spacing:.2px}
+    h1{font-size:clamp(42px,6.6vw,78px);font-weight:800;margin:0}
+    h2{font-size:clamp(26px,3vw,40px);font-weight:800;margin:0}
+    h3{font-size:clamp(18px,2vw,22px);font-weight:700;margin:0}
+    .lede{font-size:18px;color:var(--muted)}
 
-    .namewrap{line-height:1}
-    .name-main{display:flex;align-items:flex-end;gap:10px}
-    .name-first{font-family:"Playfair Display",serif;font-size:clamp(28px,5.2vw,54px);font-weight:700;letter-spacing:.2px}
-    .name-last{font-family:"Cormorant Garamond",serif;font-size:clamp(24px,4.2vw,42px);font-weight:700;letter-spacing:.12em;font-variant-caps:small-caps;color:#3a2e19}
-    .name-rule{height:8px;display:flex;align-items:center;gap:10px;margin:6px 0}
-    .name-rule:before,.name-rule:after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent)}
-    .title{font-size:14px;color:var(--muted);letter-spacing:.08em;font-variant-caps:all-small-caps}
+    /* Navegação minimalista */
+    header{position:relative}
+    .nav{border-bottom:1px solid var(--line)}
+    .brand{display:flex;align-items:center;gap:14px}
+    .monogram{height:52px;width:52px;border-radius:16px;background:#111;color:#fff;display:grid;place-items:center;font-weight:900;letter-spacing:.5px}
+    .nav a{color:var(--ink);text-decoration:none;opacity:.88}
+    .nav a:hover{opacity:1}
 
-    /* Assinatura sutil abaixo do nome */
-    .signature{margin-top:6px;opacity:.75}
-    .signature svg{display:block;height:18px}
+    /* Hero executivo */
+    .ribbon{position:absolute;inset:auto 0 0 0;height:180px;background:linear-gradient(180deg,rgba(0,0,0,.06),transparent)}
+    .grid-bg{position:absolute;inset:0;background-image:linear-gradient(transparent 31px,var(--line) 32px),linear-gradient(90deg,transparent 31px,var(--line) 32px);background-size:32px 32px;opacity:.35}
+    .pill{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);padding:.45rem .85rem;border-radius:999px;background:#fff;font-weight:800;color:var(--ink)}
 
-    /* Hero clássico */
-    .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--border)}
-    .hero-media{position:absolute;inset:0;background:url('assets/hero.jpg') center/cover no-repeat;filter:grayscale(.35) contrast(1.05) saturate(.9)}
-    .vignette::after{content:"";position:absolute;inset:0;background:radial-gradient(1200px 600px at 50% 30%, transparent 0 55%, rgba(35,28,19,.55) 100%)}
-    .hero-inner{position:relative;z-index:2;padding:84px 0 96px}
-    .card{display:inline-block;padding:24px 28px;background:linear-gradient(#fffaf3,#f6efe3);border:1px solid var(--border);border-radius:8px;box-shadow:0 2px 18px rgba(64,40,10,.08)}
+    /* Blocos */
+    .panel{background:var(--smoke);border:1px solid var(--line);border-radius:18px;padding:24px}
+    .panel.white{background:#fff}
+    .divider{height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent)}
 
-    section{padding:56px 0}
-    .panel{background:#fffdf8;border:1px solid var(--border);border-radius:10px;padding:22px;box-shadow:0 1px 14px rgba(60,42,18,.06)}
+    /* Grid responsiva */
     .grid{display:grid;gap:22px}
-    @media(min-width:900px){.grid.cols-2{grid-template-columns:1.2fr .8fr}.grid.cols-3{grid-template-columns:repeat(3,1fr)}}
+    @media(min-width:960px){
+      .cols-12{grid-template-columns:repeat(12,1fr)}
+      .span-7{grid-column:span 7}
+      .span-5{grid-column:span 5}
+      .cols-2{grid-template-columns:1.2fr .8fr}
+      .cols-3{grid-template-columns:repeat(3,1fr)}
+    }
 
-    .btn{display:inline-block;padding:.6rem 1rem;border:1px solid var(--border);border-radius:6px;text-decoration:none;color:var(--ink);background:#fffdf8}
-    .btn.primary{background:linear-gradient(#ede2cc,#e7d9be);border-color:#cbb78a}
+    .btn{display:inline-flex;align-items:center;gap:10px;border-radius:12px;padding:.78rem 1.15rem;font-weight:800;border:1px solid var(--line);background:#fff;color:var(--ink)}
+    .btn.primary{background:var(--ink);color:#fff;border-color:#000}
 
-    footer{padding:40px 0;border-top:1px solid var(--border);color:var(--muted);font-size:14px}
+    footer{padding:44px 0;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
   </style>
 </head>
-<body>
+<body class="antialiased">
+  <!-- HERO executivo, sem indicadores -->
   <header>
-    <div class="container namebar">
-      <div class="medallion" aria-hidden><span>RS</span></div>
-      <div class="namewrap">
-        <div class="name-main" aria-label="Nome: Renato Stofel">
-          <div class="name-first">Renato</div>
-          <div class="name-last">Stofel</div>
-        </div>
-        <div class="name-rule" aria-hidden></div>
-        <div class="title">Engenheiro Civil • Gestão de Obras & Instalações</div>
-        <div class="signature" aria-hidden>
-          <!-- assinatura em traço fino (SVG) -->
-          <svg viewBox="0 0 320 40" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#7a5c2f" stroke-width="1.2" stroke-linecap="round">
-            <path d="M6 29 C 28 10, 70 10, 92 28 S 148 34, 172 18 220 4, 244 22 296 34, 314 20"/>
-          </svg>
-        </div>
+    <div class="grid-bg" aria-hidden></div>
+    <div class="ribbon" aria-hidden></div>
+
+    <div class="nav container" style="padding:22px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px">
+      <div class="brand">
+        <div class="monogram">RS</div>
+        <div class="font-semibold" style="font-variant-caps:small-caps">Renato Stofel Cavalcanti</div>
       </div>
-      <nav style="margin-left:auto">
+      <nav style="display:flex;gap:26px;flex-wrap:wrap">
         <a href="#sobre">Sobre</a>
+        <a href="#atuacao">Atuação</a>
         <a href="#experiencia">Experiência</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#competencias">Competências</a>
         <a href="#contato">Contato</a>
       </nav>
     </div>
+
+    <div class="container" style="padding:58px 28px 72px 28px">
+      <div class="grid cols-12">
+        <div class="span-7">
+          <!-- TÍTULO = NOME -->
+          <h1>Renato Stofel Cavalcanti</h1>
+          <!-- Subtítulo com enfoque na credencial -->
+          <p class="lede" style="margin-top:10px"><strong>Engenheiro Civil — CREA‑RJ</strong>. Planejamento, orçamento e liderança de instalações em empreendimentos residenciais de grande porte. Visão de custo, prazo e qualidade traduzida em rotinas objetivas.</p>
+          <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
+            <a class="btn" href="#experiencia">Trajetória</a>
+            <a class="btn" href="#atuacao">Onde atuo</a>
+          </div>
+        </div>
+        <aside class="span-5 panel white">
+          <p style="letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px 0;font-size:12px">Credencial CREA‑RJ</p>
+          <p style="margin:0">Verificação oficial da carteira digital:</p>
+          <p style="margin:8px 0 0 0"><a class="btn" style="padding:.6rem .9rem" target="_blank" rel="noopener" href="https://sci.confea.org.br/carteiradigital/?q=3188062&AspxAutoDetectCookieSupport=1">Abrir carteira digital</a></p>
+        </aside>
+      </div>
+    </div>
   </header>
 
-  <!-- HERO com imagem clássica -->
-  <section class="hero vignette">
-    <div class="hero-media" role="img" aria-label="Planejamento e liderança em obra"></div>
-    <div class="container hero-inner">
-      <div class="card">
-        <p style="margin:0;color:#3a2e19">Planejamento • Liderança • Qualidade</p>
-        <h1 style="margin:.15em 0 0;font-family:'Cormorant Garamond',serif;font-size:clamp(30px,4.5vw,48px);font-weight:700">Residenciais de grande porte no RJ</h1>
-        <p style="margin:.5em 0 0;color:#5a5854">Instalações (AF/AQ, esgoto, pluvial, incêndio, gás, elétrica) • Conformidade ABNT/CBMERJ/Naturgy/Light RJ • Digitalização do canteiro</p>
+  <!-- SOBRE + ATUAÇÃO (sem indicadores) -->
+  <section id="sobre" class="container" style="padding:0 28px 0 28px">
+    <div class="panel white">
+      <div class="grid cols-2">
+        <div>
+          <h2>Apresentação</h2>
+          <p class="lede" style="margin-top:10px">Atuação prática em instalações (AF/AQ, esgoto, pluvial, incêndio, gás, elétrica — NBR 5410/NR10), com planejamento semanal e <em>lookahead</em>, reengenharia e gestão de custos e riscos. Rotina com kanban por frente e documentação objetiva.</p>
+        </div>
+        <aside>
+          <h3>Onde posso atuar</h3>
+          <ul style="margin:10px 0 0 18px">
+            <li>Coordenação de obras e equipes</li>
+            <li>Planejamento semanal e por pavimento</li>
+            <li>Orçamentos e revisão de custos</li>
+            <li>Reengenharia de soluções</li>
+            <li>Gestão de riscos e qualidade</li>
+            <li>Relatórios executivos e padrões</li>
+            <li>Treinamentos rápidos em obra</li>
+          </ul>
+        </aside>
       </div>
     </div>
   </section>
 
-  <main class="container">
-    <section id="sobre" class="grid cols-2">
-      <div>
-        <h2 style="font-family:'Cormorant Garamond',serif">Apresentação</h2>
-        <div class="panel">
-          <p>Atuo na coordenação de obras residenciais com múltiplos pavimentos e frentes simultâneas, conduzindo ritos semanais, controle de escopo/custo/prazo e garantia da qualidade.</p>
-          <p>Experiência prática em instalações prediais (AF/AQ, esgoto, pluvial, incêndio, gás e elétrica – NBR 5410/NR10), conformidade normativa (ABNT, CBMERJ, Naturgy, Light RJ) e transformação digital (dashboards HTML/JS, QR/NFC, automações via IA).</p>
-        </div>
-      </div>
-      <aside>
-        <h2 style="font-family:'Cormorant Garamond',serif">Detalhes</h2>
-        <div class="panel">
-          <p><strong>Local:</strong> Rio de Janeiro — RJ</p>
-          <p><strong>Contato:</strong> <a href="mailto:rsscavalcanti@gmail.com">rsscavalcanti@gmail.com</a> • <a href="https://wa.me/5521969814820" target="_blank">+55 (21) 96981‑4820</a></p>
-          <p><strong>Equipes:</strong> Liderança de 50+ profissionais</p>
-          <p><strong>Incorporadoras:</strong> Patrimar, Cyrela</p>
-        </div>
-      </aside>
-    </section>
-
-    <section id="experiencia">
-      <h2 style="font-family:'Cormorant Garamond',serif">Experiência</h2>
+  <!-- EXPERIÊNCIA (sem indicadores) -->
+  <section id="experiencia" class="container" style="padding:22px 28px 64px 28px">
+    <div class="grid cols-2">
       <div class="panel">
-        <h3>System Engenharia — Engenheiro Civil <span style="float:right;color:#7a5c2f">2023 — atual</span></h3>
-        <ul style="margin:.4rem 0 0 1.1rem">
-          <li>Planejamento e liderança de equipes (50+), ritos semanais e KPIs de custo/prazo/qualidade.</li>
-          <li>Gestão de instalações: AF/AQ (PEX/CPVC), esgoto/pluvial, incêndio (hidrantes/sprinklers), gás (GLP/Naturgy) e elétrica (NBR 5410/NR10).</li>
-          <li>Conformidade normativa e documentação (ABNT, CBMERJ, Naturgy, Light RJ, ARTs).</li>
-          <li>Digitalização: dashboards HTML/JS, QR/NFC, automação de relatórios e checklists com IA.</li>
+        <h3>System Engenharia — Engenheiro de Instalações</h3>
+        <p style="color:var(--muted);margin:.2rem 0 .8rem 0">Planejamento e Gestão de Contratos • RJ</p>
+        <ul style="margin:0 0 0 18px">
+          <li>Coordenação de instalações (AF/AQ, esgoto, pluvial, incêndio, gás e elétrica).</li>
+          <li>Orçamento, reengenharia e riscos alinhados ao físico‑financeiro.</li>
+          <li>Padronização de qualidade e documentação.</li>
         </ul>
       </div>
-    </section>
-
-    <section id="projetos">
-      <h2 style="font-family:'Cormorant Garamond',serif">Projetos em Destaque</h2>
-      <div class="grid cols-3">
-        <div class="panel"><h3>Atlântico Golf</h3><p>Gestão de instalações por pavimento e padronização de qualidade.</p></div>
-        <div class="panel"><h3>Riserva Golf • Orygem • Iconyc</h3><p>Coordenação de frentes simultâneas e comissionamento.</p></div>
-        <div class="panel"><h3>Painéis & Dashboards</h3><p>Kanban e indicadores (HTML/JS), publicação em GitHub Pages.</p></div>
-      </div>
-    </section>
-
-    <section id="competencias">
-      <h2 style="font-family:'Cormorant Garamond',serif">Competências</h2>
-      <div class="grid cols-3">
-        <div class="panel"><h3>Gestão & Liderança</h3><ul style="margin:.4rem 0 0 1.1rem"><li>Planejamento A3, cronogramas</li><li>Gestão de equipes e fornecedores</li><li>KPIs de custo, prazo e qualidade</li><li>Comunicação e segurança</li></ul></div>
-        <div class="panel"><h3>Instalações Prediais</h3><ul style="margin:.4rem 0 0 1.1rem"><li>Água fria/quente (PEX/CPVC)</li><li>Esgoto e pluvial</li><li>Incêndio (hidrantes/sprinklers)</li><li>Gás (GLP/Naturgy)</li><li>Elétrica (NBR 5410/NR10)</li></ul></div>
-        <div class="panel"><h3>Normas & Digital</h3><ul style="margin:.4rem 0 0 1.1rem"><li>ABNT • CBMERJ • Naturgy • Light RJ</li><li>ARTs e documentação técnica</li><li>Dashboards HTML/JS • QR/NFC</li><li>Automação de relatórios com IA</li></ul></div>
-      </div>
-    </section>
-
-    <section id="contato">
-      <h2 style="font-family:'Cormorant Garamond',serif">Contato</h2>
       <div class="panel">
-        <p><strong>E‑mail:</strong> <a href="mailto:rsscavalcanti@gmail.com">rsscavalcanti@gmail.com</a><br>
-        <strong>WhatsApp:</strong> <a href="https://wa.me/5521969814820" target="_blank">+55 (21) 96981‑4820</a></p>
-        <p><a class="btn primary" href="assets/curriculo.pdf" download>Baixar currículo (PDF)</a></p>
+        <h3>System Rio — Orçamentista</h3>
+        <p style="color:var(--muted);margin:.2rem 0 .8rem 0">Análise de custos, composições e curva ABC • RJ</p>
+        <ul style="margin:0 0 0 18px">
+          <li>Estimativas por pacote/fornecedor e comparativos.</li>
+          <li>Integração com cronograma e fluxo de caixa.</li>
+          <li>Alternativas técnicas com melhor custo‑benefício.</li>
+        </ul>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <footer class="container">
-    <div style="display:flex;gap:16px;align-items:center;justify-content:space-between">
-      <div>© <span id="y"></span> Renato Stofel — Todos os direitos reservados.</div>
-      <div style="opacity:.85;font-variant-caps:all-small-caps">Feito com HTML & elegância clássica</div>
+  <!-- CONTATO (enfoque credencial + dados) -->
+  <section id="contato" class="container" style="padding:0 28px 64px 28px">
+    <div class="panel white">
+      <div class="grid" style="grid-template-columns:1fr 1fr;gap:18px;align-items:center">
+        <div>
+          <h2>Contato</h2>
+          <p class="lede" style="margin-top:8px">Conversa objetiva para alinhar escopo e próximos passos.</p>
+          <div style="margin-top:14px;display:flex;gap:12px;flex-wrap:wrap">
+            <a class="btn primary" href="mailto:rsscavalcanti@gmail.com">Enviar e‑mail</a>
+            <a class="btn" href="https://wa.me/5521969814820" target="_blank">WhatsApp</a>
+          </div>
+        </div>
+        <div class="panel" style="background:#fff">
+          <p style="letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-size:12px;margin:0 0 6px 0">Dados</p>
+          <ul style="margin:0;padding-left:0;list-style:none;color:var(--ink)">
+            <li>📍 Rio de Janeiro — RJ</li>
+            <li>📧 rsscavalcanti@gmail.com</li>
+            <li>📱 +55 (21) 96981‑4820</li>
+          </ul>
+          <div class="divider" style="margin:14px 0"></div>
+          <a class="btn" style="padding:.6rem .9rem" target="_blank" rel="noopener" href="https://sci.confea.org.br/carteiradigital/?q=3188062&AspxAutoDetectCookieSupport=1">Verificação CREA‑RJ</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:16px">
+      <p>© <span id="y"></span> Renato Stofel Cavalcanti. Todos os direitos reservados.</p>
+      <p style="opacity:.88">Site estático</p>
     </div>
   </footer>
-  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
+
