@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Renato Stofel — Engenheiro Civil</title>
+  <meta name="description" content="Currículo clássico e elegante de Renato Stofel: gestão de obras, liderança e instalações prediais de grande porte." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Tipos clássicos, com reforço no nome -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=IM+Fell+English:ital@0;1&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --paper:#f7f3ee; --ink:#2b2a27; --muted:#5a5854; --border:#d5cec3; --accent:#7a5c2f; --accent-soft:#b79b6b; --link:#644a1f;
+    }
+    body{margin:0;background:radial-gradient(1200px 600px at 50% -10%, #ffffff 0%, var(--paper) 60%, #efe7db 100%);color:var(--ink);font-family:"Libre Baskerville", Georgia, serif;line-height:1.55}
+    .container{max-width:1024px;margin:0 auto;padding:0 24px}
+    header{position:sticky;top:0;z-index:20;background:linear-gradient(#faf6efee,#faf6efcc);border-bottom:1px solid var(--border)}
+    nav a{color:var(--ink);text-decoration:none;margin-right:18px;font-variant-caps:small-caps;letter-spacing:.06em;opacity:.85}
+    nav a:hover{opacity:1;color:var(--link)}
+
+    /* BLOCO ESPECIAL DO NOME */
+    .namebar{display:flex;align-items:center;gap:18px;padding:14px 0}
+    .medallion{width:52px;height:52px;border:1px solid var(--border);border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#8b6b2f,#5c4522);color:#fff;text-shadow:0 1px 0 rgba(0,0,0,.25)}
+    .medallion span{font-family:"IM Fell English",serif;font-size:22px;letter-spacing:.5px}
+
+    .namewrap{line-height:1}
+    .name-main{display:flex;align-items:flex-end;gap:10px}
+    .name-first{font-family:"Playfair Display",serif;font-size:clamp(28px,5.2vw,54px);font-weight:700;letter-spacing:.2px}
+    .name-last{font-family:"Cormorant Garamond",serif;font-size:clamp(24px,4.2vw,42px);font-weight:700;letter-spacing:.12em;font-variant-caps:small-caps;color:#3a2e19}
+    .name-rule{height:8px;display:flex;align-items:center;gap:10px;margin:6px 0}
+    .name-rule:before,.name-rule:after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent)}
+    .title{font-size:14px;color:var(--muted);letter-spacing:.08em;font-variant-caps:all-small-caps}
+
+    /* Assinatura sutil abaixo do nome */
+    .signature{margin-top:6px;opacity:.75}
+    .signature svg{display:block;height:18px}
+
+    /* Hero clássico */
+    .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--border)}
+    .hero-media{position:absolute;inset:0;background:url('assets/hero.jpg') center/cover no-repeat;filter:grayscale(.35) contrast(1.05) saturate(.9)}
+    .vignette::after{content:"";position:absolute;inset:0;background:radial-gradient(1200px 600px at 50% 30%, transparent 0 55%, rgba(35,28,19,.55) 100%)}
+    .hero-inner{position:relative;z-index:2;padding:84px 0 96px}
+    .card{display:inline-block;padding:24px 28px;background:linear-gradient(#fffaf3,#f6efe3);border:1px solid var(--border);border-radius:8px;box-shadow:0 2px 18px rgba(64,40,10,.08)}
+
+    section{padding:56px 0}
+    .panel{background:#fffdf8;border:1px solid var(--border);border-radius:10px;padding:22px;box-shadow:0 1px 14px rgba(60,42,18,.06)}
+    .grid{display:grid;gap:22px}
+    @media(min-width:900px){.grid.cols-2{grid-template-columns:1.2fr .8fr}.grid.cols-3{grid-template-columns:repeat(3,1fr)}}
+
+    .btn{display:inline-block;padding:.6rem 1rem;border:1px solid var(--border);border-radius:6px;text-decoration:none;color:var(--ink);background:#fffdf8}
+    .btn.primary{background:linear-gradient(#ede2cc,#e7d9be);border-color:#cbb78a}
+
+    footer{padding:40px 0;border-top:1px solid var(--border);color:var(--muted);font-size:14px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container namebar">
+      <div class="medallion" aria-hidden><span>RS</span></div>
+      <div class="namewrap">
+        <div class="name-main" aria-label="Nome: Renato Stofel">
+          <div class="name-first">Renato</div>
+          <div class="name-last">Stofel</div>
+        </div>
+        <div class="name-rule" aria-hidden></div>
+        <div class="title">Engenheiro Civil • Gestão de Obras & Instalações</div>
+        <div class="signature" aria-hidden>
+          <!-- assinatura em traço fino (SVG) -->
+          <svg viewBox="0 0 320 40" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#7a5c2f" stroke-width="1.2" stroke-linecap="round">
+            <path d="M6 29 C 28 10, 70 10, 92 28 S 148 34, 172 18 220 4, 244 22 296 34, 314 20"/>
+          </svg>
+        </div>
+      </div>
+      <nav style="margin-left:auto">
+        <a href="#sobre">Sobre</a>
+        <a href="#experiencia">Experiência</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#competencias">Competências</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO com imagem clássica -->
+  <section class="hero vignette">
+    <div class="hero-media" role="img" aria-label="Planejamento e liderança em obra"></div>
+    <div class="container hero-inner">
+      <div class="card">
+        <p style="margin:0;color:#3a2e19">Planejamento • Liderança • Qualidade</p>
+        <h1 style="margin:.15em 0 0;font-family:'Cormorant Garamond',serif;font-size:clamp(30px,4.5vw,48px);font-weight:700">Residenciais de grande porte no RJ</h1>
+        <p style="margin:.5em 0 0;color:#5a5854">Instalações (AF/AQ, esgoto, pluvial, incêndio, gás, elétrica) • Conformidade ABNT/CBMERJ/Naturgy/Light RJ • Digitalização do canteiro</p>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <section id="sobre" class="grid cols-2">
+      <div>
+        <h2 style="font-family:'Cormorant Garamond',serif">Apresentação</h2>
+        <div class="panel">
+          <p>Atuo na coordenação de obras residenciais com múltiplos pavimentos e frentes simultâneas, conduzindo ritos semanais, controle de escopo/custo/prazo e garantia da qualidade.</p>
+          <p>Experiência prática em instalações prediais (AF/AQ, esgoto, pluvial, incêndio, gás e elétrica – NBR 5410/NR10), conformidade normativa (ABNT, CBMERJ, Naturgy, Light RJ) e transformação digital (dashboards HTML/JS, QR/NFC, automações via IA).</p>
+        </div>
+      </div>
+      <aside>
+        <h2 style="font-family:'Cormorant Garamond',serif">Detalhes</h2>
+        <div class="panel">
+          <p><strong>Local:</strong> Rio de Janeiro — RJ</p>
+          <p><strong>Contato:</strong> <a href="mailto:rsscavalcanti@gmail.com">rsscavalcanti@gmail.com</a> • <a href="https://wa.me/5521969814820" target="_blank">+55 (21) 96981‑4820</a></p>
+          <p><strong>Equipes:</strong> Liderança de 50+ profissionais</p>
+          <p><strong>Incorporadoras:</strong> Patrimar, Cyrela</p>
+        </div>
+      </aside>
+    </section>
+
+    <section id="experiencia">
+      <h2 style="font-family:'Cormorant Garamond',serif">Experiência</h2>
+      <div class="panel">
+        <h3>System Engenharia — Engenheiro Civil <span style="float:right;color:#7a5c2f">2023 — atual</span></h3>
+        <ul style="margin:.4rem 0 0 1.1rem">
+          <li>Planejamento e liderança de equipes (50+), ritos semanais e KPIs de custo/prazo/qualidade.</li>
+          <li>Gestão de instalações: AF/AQ (PEX/CPVC), esgoto/pluvial, incêndio (hidrantes/sprinklers), gás (GLP/Naturgy) e elétrica (NBR 5410/NR10).</li>
+          <li>Conformidade normativa e documentação (ABNT, CBMERJ, Naturgy, Light RJ, ARTs).</li>
+          <li>Digitalização: dashboards HTML/JS, QR/NFC, automação de relatórios e checklists com IA.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projetos">
+      <h2 style="font-family:'Cormorant Garamond',serif">Projetos em Destaque</h2>
+      <div class="grid cols-3">
+        <div class="panel"><h3>Atlântico Golf</h3><p>Gestão de instalações por pavimento e padronização de qualidade.</p></div>
+        <div class="panel"><h3>Riserva Golf • Orygem • Iconyc</h3><p>Coordenação de frentes simultâneas e comissionamento.</p></div>
+        <div class="panel"><h3>Painéis & Dashboards</h3><p>Kanban e indicadores (HTML/JS), publicação em GitHub Pages.</p></div>
+      </div>
+    </section>
+
+    <section id="competencias">
+      <h2 style="font-family:'Cormorant Garamond',serif">Competências</h2>
+      <div class="grid cols-3">
+        <div class="panel"><h3>Gestão & Liderança</h3><ul style="margin:.4rem 0 0 1.1rem"><li>Planejamento A3, cronogramas</li><li>Gestão de equipes e fornecedores</li><li>KPIs de custo, prazo e qualidade</li><li>Comunicação e segurança</li></ul></div>
+        <div class="panel"><h3>Instalações Prediais</h3><ul style="margin:.4rem 0 0 1.1rem"><li>Água fria/quente (PEX/CPVC)</li><li>Esgoto e pluvial</li><li>Incêndio (hidrantes/sprinklers)</li><li>Gás (GLP/Naturgy)</li><li>Elétrica (NBR 5410/NR10)</li></ul></div>
+        <div class="panel"><h3>Normas & Digital</h3><ul style="margin:.4rem 0 0 1.1rem"><li>ABNT • CBMERJ • Naturgy • Light RJ</li><li>ARTs e documentação técnica</li><li>Dashboards HTML/JS • QR/NFC</li><li>Automação de relatórios com IA</li></ul></div>
+      </div>
+    </section>
+
+    <section id="contato">
+      <h2 style="font-family:'Cormorant Garamond',serif">Contato</h2>
+      <div class="panel">
+        <p><strong>E‑mail:</strong> <a href="mailto:rsscavalcanti@gmail.com">rsscavalcanti@gmail.com</a><br>
+        <strong>WhatsApp:</strong> <a href="https://wa.me/5521969814820" target="_blank">+55 (21) 96981‑4820</a></p>
+        <p><a class="btn primary" href="assets/curriculo.pdf" download>Baixar currículo (PDF)</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    <div style="display:flex;gap:16px;align-items:center;justify-content:space-between">
+      <div>© <span id="y"></span> Renato Stofel — Todos os direitos reservados.</div>
+      <div style="opacity:.85;font-variant-caps:all-small-caps">Feito com HTML & elegância clássica</div>
+    </div>
+  </footer>
+  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+</html>
